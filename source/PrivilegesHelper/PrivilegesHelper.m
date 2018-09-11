@@ -138,6 +138,8 @@ static const NSTimeInterval kHelperCheckInterval = 20.0;
     reply([[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]);
 }
 
+// THIS SEEMS TO BE MAKING THE ACTUAL GROUP MEMBERSHIP CHANGES
+
 - (void)changeGroupMembershipForUser:(NSString*)userName group:(uint)groupID remove:(BOOL)remove authorization:(NSData *)authData withReply:(void(^)(NSError *error))reply
 {
     NSError *error = [self checkAuthorization:authData command:_cmd];
